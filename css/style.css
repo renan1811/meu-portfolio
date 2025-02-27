@@ -1,0 +1,180 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+a {
+    color: black;
+}
+/* =================== Animação de fundo =================== */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #202020, #131313, #000000);
+    background-size: 600% 600%;
+    animation: gradientBackground 50s ease infinite;
+}
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* =================== APRESENTAÇÃO =================== */
+.apresentacao {
+    text-align: center;
+    margin-top: 20vw;
+    overflow: hidden;
+}
+
+.apresentacao h1 {
+    font-size: 2.5rem;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.apresentacao h2 {
+    margin-bottom: 1vw;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.apresentacao ul {
+    display: flex;
+    justify-content: center;
+}
+
+.apresentacao ul li {
+    margin: 1vw 0.5vw;
+}
+
+/* =================== ÍCONES =================== */
+.apresentacao ul li a i {
+    position: relative;
+    color: white;
+    font-size: 2vw;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* Brilho ao passar o mouse */
+.apresentacao ul li a i::after {
+    content: "";
+    position: absolute;
+    left: -120%;
+    top: 0;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent);
+    transition: left 1s ease-out;
+    border-radius: 0.2vw;
+}
+
+.apresentacao ul li a:hover i::after {
+    left: 100%;
+}
+
+/* =================== ANIMAÇÃO FADE =================== */
+.leFadeInRight h2, 
+.leFadeInRight h1, 
+.leFadeInRight ul {
+    animation: leFadeInRight 3s forwards;
+}
+
+@keyframes leFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =================== ANIMAÇÃO DE MOVIMENTO =================== */
+span.animacaoIcon { 
+    display: inline-block;
+    animation: animacaoIcon 2s ease-in-out infinite;
+}
+
+@keyframes animacaoIcon {
+    from, to { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(10px);  
+    }
+}
+
+/* Atrasos individuais para cada ícone */
+ul li:nth-child(1) span.animacaoIcon {
+    animation-delay: 0s;
+}
+
+ul li:nth-child(2) span.animacaoIcon {
+    animation-delay: 0.5s;
+}
+
+ul li:nth-child(3) span.animacaoIcon {
+    animation-delay: 1s;
+}
+
+
+
+
