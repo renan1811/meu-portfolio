@@ -1,0 +1,55 @@
+.projetos {
+    background: inherit; /* Herda o fundo do body */
+    padding: 50px 0;
+}
+.titulos {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    text-align: center;
+    margin: 0 0 1vw 0;
+    
+    
+}
+
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+    /* Texto grande para cobrir toda a tela */
+    width: 100%;
+    /* Faz o texto ocupar toda a largura */
+    text-align: center;
+    color: rgba(152, 217, 255, 0.01);
+    /* Branco com opacidade */
+    font-weight: bold;
+    z-index: 0;
+    font-family: Verdana, sans-serif;
+    user-select: none;
+    /* Impede a seleção do texto */
+}
+
+.frente {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    /* Garante que fiquem um abaixo do outro */
+    align-items: center;
+
+}
+
+/* Texto principal */
+.foreground-text {
+    font-family: Verdana, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+    /* Dá um espaçamento entre os textos */
+    font-size: 3.5vw;
+}
